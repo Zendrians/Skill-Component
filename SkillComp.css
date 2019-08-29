@@ -24,7 +24,12 @@
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
+    transition: all 0.5s;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.05)
+}
+
+.Skill-ball:hover {
+    transform: translateY(-5px)
 }
 
 .Skill-ball img {
@@ -40,6 +45,7 @@
     overflow: hidden;
     position: relative;
     display: flex;
+    transition: all 0.5s;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.05)
 }
 
@@ -47,7 +53,7 @@
     width: 25%;
     height: 100%;
     /* background-color: #61DAFB; */
-    
+    transition: all 0.5s;
 }
 
 #Skill-display-main {
@@ -64,12 +70,14 @@
     /* color: #61DAFB; */
     letter-spacing: 2px;
     margin-bottom: 10px;
+    transition: all 0.5s;
 }
 
 #Skill-display-main ul {
     padding-top: 20px;
     margin-left: 5px;
     list-style-type: none;
+    transition: all 0.5s;
 }
 
 #Skill-display-main ul li {
@@ -113,10 +121,12 @@
     display: grid;
     align-items: center;
     justify-items: center;
+    transition: all 0.5s;
 }
 
 #Skill-display-logo-ball img {
     width: 60%;
     height: 60%;
+    transition: all 0.5s;
 }
 
