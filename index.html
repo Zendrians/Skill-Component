@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./SkillComp.css">
+    <title>Document</title>
+</head>
+<body>
+    <div style="padding: 3rem;">
+
+    <div id='SkillComp'>
+        <div id='Skill-grid'>
+            <div v-for='(skill, i) in skills' @mouseover='updateDisplay(i)' :style="{backgroundColor: skill.color}" class="Skill-ball">
+                <img :src="`./logos/${skill.name}.svg`" alt="">
+            </div>
+        </div>
+        <div id='Skill-display'>
+            <div id='Skill-display-card' :style="{border: borderString}">
+                <div id='Skill-display-side' :style="{backgroundColor: currentSkill.color}"></div>
+                <div id='Skill-display-main'>
+                    <h3 :style="{color: currentSkill.color}">{{currentSkill.name}}</h3>
+                    <ul>
+                        <li v-for='perk in currentSkill.perks' class="Skill-display-list-item">
+                             <img src="./logos/Cube.svg"> 
+                             <span>{{perk}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div id='Skill-display-logo-wrap'>
+                    <div id='Skill-display-logo-ball' :style="{backgroundColor: currentSkill.color}">
+                        <img :src="`./logos/${currentSkill.name}.svg`" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./SkillComp.js"></script>
+
+</div>
+</body>
+</html>
